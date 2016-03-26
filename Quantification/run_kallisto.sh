@@ -8,7 +8,7 @@
 
 # inputs
 DATA="/n/regal/eddy_lab/pkoo/opticlobe/data/"
-INDEX="/n/regal/eddy_lab/pkoo/opticlobe/reference_transcriptome/dm6_transcripts.idx"
+INDEX="/n/regal/eddy_lab/pkoo/opticlobe/assembly/stringtie/merge/dm6_transcripts.idx"
 OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/quantification/"
 
 # make quantification directory

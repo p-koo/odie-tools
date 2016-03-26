@@ -6,18 +6,11 @@
 
 # inputs
 GENOME="/n/regal/eddy_lab/pkoo/opticlobe/reference_genome/dm6.fa"
-OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/assembly/stringtie/"
-
-# make a directory for stringtie reference transcriptome within quantifiation directory
-DIRECTORY=$OUTPUT"transcriptome/"
-if [ ! -d "$DIRECTORY" ]; then
-    echo "making directory "$DIRECTORY
-    mkdir $DIRECTORY
-fi
+OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/assembly/stringtie/merge/"
 
 # submit jobs for all aligned.bam files in DATA directory
 for i in $OUTPUT; do
     NAME=${i%.gtf}
     NAME=${NAME##*/}
-    sbatch batch_kallisto.sh $i $GENOME $DIRECTORY$NAME".fa"
+    sbatch batch_kallisto.sh $i $GENOME $OUTPUT$NAME".fa"
 done
