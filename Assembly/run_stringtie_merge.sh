@@ -17,7 +17,5 @@ if [ ! -d "$DIRECTORY" ]; then
     mkdir $DIRECTORY
 fi
 
-ls $DATA*.gtf > $DIRECTORY"gtf_list.txt"
-
 # submit batch file to merge all gtf files
-sbatch batch_stringtie_merge.sh $DATA"gtf_list.txt" $ANNOTATION $DIRECTORY
+sbatch batch_stringtie_merge.sh $DATA $ANNOTATION $DIRECTORY 

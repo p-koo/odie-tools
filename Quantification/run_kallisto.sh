@@ -17,7 +17,7 @@ if [ ! -d "$OUTPUT" ]; then
 fi
 
 # make a directory for kallisto within quantifiation directory
-DIRECTORY=$OUTPUT"kallisto-star1pass/"
+DIRECTORY=$OUTPUT"kallisto-star1pass-stringtie/"
 if [ ! -d "$DIRECTORY" ]; then
     echo "making directory "$DIRECTORY
     mkdir $DIRECTORY
