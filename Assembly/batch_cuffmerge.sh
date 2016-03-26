@@ -19,7 +19,7 @@
 
 # load modules 
 source new-modules.sh
-source load cufflinks/2.2.1-fasrc01
+module load cufflinks/2.2.1-fasrc01
 
 # perform transcript assembly 
 cuffmerge \
