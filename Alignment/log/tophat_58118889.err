@@ -1,0 +1,32 @@
+
+[2016-03-12 14:52:39] Beginning TopHat run (v2.0.13)
+-----------------------------------------------
+[2016-03-12 14:52:39] Checking for Bowtie
+		  Bowtie version:	 2.2.2.0
+[2016-03-12 14:52:39] Checking for Bowtie index files (genome)..
+[2016-03-12 14:52:39] Checking for reference FASTA file
+[2016-03-12 14:52:39] Generating SAM header for /n/regal/eddy_lab/pkoo/opticlobe/reference_genome/dm6_bowtie_reference/dm6
+[2016-03-12 14:52:39] Reading known junctions from GTF file
+[2016-03-12 14:52:44] Preparing reads
+	 left reads: min. length=105, max. length=105, 57360365 kept reads (102162 discarded)
+[2016-03-12 15:39:45] Building transcriptome data files /n/regal/eddy_lab/pkoo/opticlobe/alignment/tophat150507_SN651_0394_BH53WHBCXX__Sample_L_G_L29_1/tmp/dm6_Ensembl
+[2016-03-12 15:40:52] Building Bowtie index from dm6_Ensembl.fa
+[2016-03-12 16:06:28] Mapping left_kept_reads to transcriptome dm6_Ensembl with Bowtie2 
+[2016-03-12 17:41:19] Resuming TopHat pipeline with unmapped reads
+[2016-03-12 17:41:20] Mapping left_kept_reads.m2g_um to genome dm6 with Bowtie2 
+[2016-03-12 19:42:49] Mapping left_kept_reads.m2g_um_seg1 to genome dm6 with Bowtie2 (1/4)
+[2016-03-12 20:10:07] Mapping left_kept_reads.m2g_um_seg2 to genome dm6 with Bowtie2 (2/4)
+[2016-03-12 20:41:47] Mapping left_kept_reads.m2g_um_seg3 to genome dm6 with Bowtie2 (3/4)
+[2016-03-12 21:11:10] Mapping left_kept_reads.m2g_um_seg4 to genome dm6 with Bowtie2 (4/4)
+[2016-03-12 21:33:36] Searching for junctions via segment mapping
+[2016-03-12 21:43:15] Retrieving sequences for splices
+[2016-03-12 21:43:56] Indexing splices
+Building a SMALL index
+[2016-03-12 21:46:44] Mapping left_kept_reads.m2g_um_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2016-03-12 22:01:22] Mapping left_kept_reads.m2g_um_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2016-03-12 22:16:21] Mapping left_kept_reads.m2g_um_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2016-03-12 22:32:10] Mapping left_kept_reads.m2g_um_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2016-03-12 22:42:20] Joining segment hits
+[2016-03-12 22:48:52] Reporting output tracks
+slurmstepd: error: *** JOB 58118889 ON holy2a22207 CANCELLED AT 2016-03-12T22:53:04 DUE TO TIME LIMIT ***
+slurmstepd: error: Exceeded step memory limit at some point.

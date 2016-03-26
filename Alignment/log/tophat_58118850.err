@@ -1,0 +1,35 @@
+
+[2016-03-12 14:52:14] Beginning TopHat run (v2.0.13)
+-----------------------------------------------
+[2016-03-12 14:52:14] Checking for Bowtie
+		  Bowtie version:	 2.2.2.0
+[2016-03-12 14:52:14] Checking for Bowtie index files (genome)..
+[2016-03-12 14:52:14] Checking for reference FASTA file
+[2016-03-12 14:52:14] Generating SAM header for /n/regal/eddy_lab/pkoo/opticlobe/reference_genome/dm6_bowtie_reference/dm6
+[2016-03-12 14:52:15] Reading known junctions from GTF file
+[2016-03-12 14:52:19] Preparing reads
+	 left reads: min. length=105, max. length=105, 31549637 kept reads (33436 discarded)
+[2016-03-12 15:16:41] Building transcriptome data files /n/regal/eddy_lab/pkoo/opticlobe/alignment/tophat150507_SN651_0393_AH572MBCXX__Sample_L_G_L19_1/tmp/dm6_Ensembl
+[2016-03-12 15:17:47] Building Bowtie index from dm6_Ensembl.fa
+[2016-03-12 15:43:20] Mapping left_kept_reads to transcriptome dm6_Ensembl with Bowtie2 
+[2016-03-12 16:32:08] Resuming TopHat pipeline with unmapped reads
+[2016-03-12 16:32:09] Mapping left_kept_reads.m2g_um to genome dm6 with Bowtie2 
+[2016-03-12 17:48:13] Mapping left_kept_reads.m2g_um_seg1 to genome dm6 with Bowtie2 (1/4)
+[2016-03-12 18:10:27] Mapping left_kept_reads.m2g_um_seg2 to genome dm6 with Bowtie2 (2/4)
+[2016-03-12 18:35:40] Mapping left_kept_reads.m2g_um_seg3 to genome dm6 with Bowtie2 (3/4)
+[2016-03-12 18:54:10] Mapping left_kept_reads.m2g_um_seg4 to genome dm6 with Bowtie2 (4/4)
+[2016-03-12 19:04:25] Searching for junctions via segment mapping
+[2016-03-12 19:10:02] Retrieving sequences for splices
+[2016-03-12 19:10:21] Indexing splices
+Building a SMALL index
+[2016-03-12 19:12:22] Mapping left_kept_reads.m2g_um_seg1 to genome segment_juncs with Bowtie2 (1/4)
+[2016-03-12 19:17:29] Mapping left_kept_reads.m2g_um_seg2 to genome segment_juncs with Bowtie2 (2/4)
+[2016-03-12 19:22:25] Mapping left_kept_reads.m2g_um_seg3 to genome segment_juncs with Bowtie2 (3/4)
+[2016-03-12 19:27:09] Mapping left_kept_reads.m2g_um_seg4 to genome segment_juncs with Bowtie2 (4/4)
+[2016-03-12 19:30:25] Joining segment hits
+[2016-03-12 19:34:52] Reporting output tracks
+-----------------------------------------------
+[2016-03-12 21:11:33] A summary of the alignment counts can be found in /n/regal/eddy_lab/pkoo/opticlobe/alignment/tophat150507_SN651_0393_AH572MBCXX__Sample_L_G_L19_1/align_summary.txt
+[2016-03-12 21:11:33] Run complete: 06:19:19 elapsed
+slurmstepd: error: Exceeded step memory limit at some point.
+slurmstepd: error: Exceeded job memory limit at some point.

@@ -7,7 +7,7 @@
 #	<output_name>
 
 # inputs
-DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/star1pass/"
+DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/test/"
 ANNOTATION="/n/regal/eddy_lab/pkoo/opticlobe/reference_annotation/dm6_Ensembl.gtf"
 OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/assembly/"
 

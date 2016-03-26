@@ -7,7 +7,7 @@
 #	<output_directory>
 
 # inputs
-DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/star1pass/"
+DATA="/n/regal/eddy_lab/pkoo/opticlobe/data/"
 INDEX="/n/regal/eddy_lab/pkoo/opticlobe/reference_transcriptome/dm6_transcripts.idx"
 OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/quantification/"
 
@@ -24,9 +24,8 @@ if [ ! -d "$DIRECTORY" ]; then
 fi
 
 # submit jobs for all aligned.bam files in DATA directory
-for i in $DATA*Aligned.sortedByCoord.out.bam; do
-    NAME=${i%Aligned.sortedByCoord.out.bam}
+for i in $DATA*.fastq*; do
+    NAME=${i%.fastq.gz}
     NAME=${NAME##*/}
     sbatch batch_kallisto.sh $i $INDEX $DIRECTORY$NAME
 done
-

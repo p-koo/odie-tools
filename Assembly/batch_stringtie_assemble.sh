@@ -10,7 +10,7 @@
 #SBATCH -p serial_requeue        	# partition (general,serial_requeue)
 #SBATCH -n 8                            # number of cores
 #SBATCH -N 1                            # number of nodes
-#SBATCH --mem 32000                	# memory pool for all cores
+#SBATCH --mem 12000                	# memory pool for all cores
 #SBATCH -t 0-2:00                       # time (D-HH:MM)
 #SBATCH -o log/stringtie_%A.out   	# STDOUT
 #SBATCH -e log/stringtie_%A.err     	# STDERR
@@ -26,5 +26,5 @@ $1 \
 -G $2 \
 -o $3.gtf \
 -f 0.1 \
--p 16
-
+-p 8
+-B

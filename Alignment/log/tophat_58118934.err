@@ -1,0 +1,32 @@
+
+[2016-03-12 14:52:55] Beginning TopHat run (v2.0.13)
+-----------------------------------------------
+[2016-03-12 14:52:55] Checking for Bowtie
+		  Bowtie version:	 2.2.2.0
+[2016-03-12 14:52:55] Checking for Bowtie index files (genome)..
+[2016-03-12 14:52:55] Checking for reference FASTA file
+[2016-03-12 14:52:55] Generating SAM header for /n/regal/eddy_lab/pkoo/opticlobe/reference_genome/dm6_bowtie_reference/dm6
+[2016-03-12 14:52:56] Reading known junctions from GTF file
+[2016-03-12 14:53:00] Preparing reads
+	 left reads: min. length=50, max. length=50, 34875739 kept reads (40751 discarded)
+[2016-03-12 15:08:36] Building transcriptome data files /n/regal/eddy_lab/pkoo/opticlobe/alignment/tophat151028_SN651_0472_BH7YYFBCXX__Sample_LH_103_1/tmp/dm6_Ensembl
+[2016-03-12 15:09:42] Building Bowtie index from dm6_Ensembl.fa
+[2016-03-12 15:35:21] Mapping left_kept_reads to transcriptome dm6_Ensembl with Bowtie2 
+[2016-03-12 16:21:21] Resuming TopHat pipeline with unmapped reads
+[2016-03-12 16:21:22] Mapping left_kept_reads.m2g_um to genome dm6 with Bowtie2 
+[2016-03-12 16:58:18] Mapping left_kept_reads.m2g_um_seg1 to genome dm6 with Bowtie2 (1/2)
+[2016-03-12 17:03:24] Mapping left_kept_reads.m2g_um_seg2 to genome dm6 with Bowtie2 (2/2)
+[2016-03-12 17:11:10] Searching for junctions via segment mapping
+	Coverage-search algorithm is turned on, making this step very slow
+	Please try running TopHat again with the option (--no-coverage-search) if this step takes too much time or memory.
+[2016-03-12 19:14:18] Retrieving sequences for splices
+[2016-03-12 19:21:13] Indexing splices
+Building a SMALL index
+[2016-03-12 19:41:52] Mapping left_kept_reads.m2g_um_seg1 to genome segment_juncs with Bowtie2 (1/2)
+[2016-03-12 19:46:52] Mapping left_kept_reads.m2g_um_seg2 to genome segment_juncs with Bowtie2 (2/2)
+[2016-03-12 19:51:28] Joining segment hits
+[2016-03-12 19:56:27] Reporting output tracks
+slurmstepd: error: Job 58118934 exceeded memory limit (45804944 > 24576000), being killed
+slurmstepd: error: *** JOB 58118934 ON holyconroy03 CANCELLED AT 2016-03-12T20:05:15 ***
+slurmstepd: error: Exceeded step memory limit at some point.
+slurmstepd: error: Exceeded job memory limit at some point.
