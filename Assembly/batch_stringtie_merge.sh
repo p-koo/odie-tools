@@ -22,9 +22,12 @@ source new-modules.sh
 
 # perform transcript assembly 
 stringtie \
-$1 \
+--merge
+-l "merged" \
 -G $2 \
 -o $3.gtf \
--f 0.1 \
--p 8 \
--B
+-m 50 \
+-c 0 \
+-F 0 \
+-T 0 \
+$1

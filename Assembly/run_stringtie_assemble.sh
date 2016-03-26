@@ -7,7 +7,8 @@
 #	<output_name>
 
 # inputs
-DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/test/"
+ALIGNER="STAR1pass/"
+DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/"$ALIGNER
 ANNOTATION="/n/regal/eddy_lab/pkoo/opticlobe/reference_annotation/dm6_Ensembl.gtf"
 OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/assembly/"
 
@@ -17,7 +18,14 @@ if [ ! -d "$OUTPUT" ]; then
 fi
 
 # make a directory for stringtie
-DIRECTORY=$OUTPUT"stringtie"
+DIRECTORY=$OUTPUT"stringtie/"
+if [ ! -d "$DIRECTORY" ]; then
+    echo "making directory "$DIRECTORY
+    mkdir $DIRECTORY
+fi
+
+# make a directory for stringtie/alignment
+DIRECTORY=$DIRECTORY$ALIGNER
 if [ ! -d "$DIRECTORY" ]; then
     echo "making directory "$DIRECTORY
     mkdir $DIRECTORY
@@ -27,6 +35,12 @@ fi
 for i in $DATA*Aligned.sortedByCoord.out.bam; do 
     NAME=${i%Aligned.sortedByCoord.out.bam}
     NAME=${NAME##*/}
+        
+    #if [ ! -d "$DIRECTORY$NAME" ]; then
+	# echo "making directory "$DIRECTORY$NAME
+	# mkdir $DIRECTORY$NAME
+    #fi
+    
     sbatch batch_stringtie_assemble.sh $i $ANNOTATION $DIRECTORY$NAME
 done
 

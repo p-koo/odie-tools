@@ -1,9 +1,0 @@
-
-[quant] fragment length distribution is truncate gaussian with mean = 50, sd = 1
-[index] k-mer length: 31
-[index] number of targets: 30,651
-[index] number of k-mers: 33,222,996
-[index] number of equivalence classes: 58,231
-[quant] running in single-end mode
-[quant] will process file 1: /n/regal/eddy_lab/pkoo/opticlobe/data/150507_SN651_0394_BH53WHBCXX__Sample_L_G_L26_1.fastq.gz
-[quant] finding pseudoalignments for the reads ...slurmstepd: error: *** JOB 58075660 ON holy2a24204 CANCELLED AT 2016-03-11T14:50:01 ***
