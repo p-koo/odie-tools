@@ -20,3 +20,4 @@ for i in $DATA*.fa*; do
     NAME=${NAME##*/}
     sbatch batch_kallisto_index.sh $i $OUTPUT$NAME 
 done
+
