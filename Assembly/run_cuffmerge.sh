@@ -11,7 +11,7 @@ DATA="/n/regal/eddy_lab/pkoo/opticlobe/assembly/stringtie/"
 ANNOTATION="/n/regal/eddy_lab/pkoo/opticlobe/reference_annotation/dm6_Ensembl.gtf"
 
 # make a directory for stringtie/alignment
-DIRECTORY=$DATA"merge"
+DIRECTORY=$DATA"merge/"
 if [ ! -d "$DIRECTORY" ]; then
     echo "making directory "$DIRECTORY
     mkdir $DIRECTORY
