@@ -11,7 +11,7 @@
 #SBATCH -n 12                            # number of cores
 #SBATCH -N 1                            # number of nodes
 #SBATCH --mem 8000                	# memory pool for all cores
-#SBATCH -t 0-1:30                       # time (D-HH:MM)
+#SBATCH -t 0-8:00                       # time (D-HH:MM)
 #SBATCH -o log/cuffmerge_%A.out   	# STDOUT
 #SBATCH -e log/cuffmerge_%A.err     	# STDERR
 #SBATCH --mail-type=FAIL 		# notifications (END,FAIL,ALL)
