@@ -21,7 +21,7 @@ module load samtools/1.2-fasrc01
 # perform alignment to reference genome
 for i in $1*.bam; do 
     NAME=${i%.bam}
- 	samtools sort $i $NAME".sorted" 
+ 	samtools sort -o $NAME".sorted" $i 
 done
 
 for i in $1*.sorted.bam; do 
