@@ -9,6 +9,7 @@
 # inputs
 DATA="/n/regal/eddy_lab/pkoo/opticlobe/assembly/stringtie/"
 ANNOTATION="/n/regal/eddy_lab/pkoo/opticlobe/reference_annotation/dm6_Ensembl.gtf"
+GENOME="/n/regal/eddy_lab/pkoo/opticlobe/reference_genome/dm6.fa"
 
 # make a directory for stringtie/alignment
 DIRECTORY=$DATA"merge/"
@@ -20,5 +21,5 @@ fi
 ls $DATA*.gtf >> $DIRECTORY"gtf_list.txt"
     
 # submit batch file to merge all gtf files
-sbatch batch_cuffmerge.sh $DIRECTORY"gtf_list.txt" $ANNOTATION $DIRECTORY
+sbatch batch_cuffmerge.sh $DIRECTORY"gtf_list.txt" $ANNOTATION $GENOME
 
