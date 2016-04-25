@@ -23,7 +23,6 @@ module load cufflinks/2.2.1-fasrc01
 
 # perform transcript assembly 
 cuffmerge \
--g $2 \
--s $3 \
+-s $2 \
 -p 12 \
 $1

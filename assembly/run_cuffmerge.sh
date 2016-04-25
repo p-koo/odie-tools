@@ -21,5 +21,5 @@ fi
 ls $DATA*.gtf >> $DIRECTORY"gtf_list.txt"
     
 # submit batch file to merge all gtf files
-sbatch batch_cuffmerge.sh $DIRECTORY"gtf_list.txt" $ANNOTATION $GENOME
+sbatch batch_cuffmerge.sh $DIRECTORY"gtf_list.txt" $GENOME
 
