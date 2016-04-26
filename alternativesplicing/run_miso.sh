@@ -6,11 +6,20 @@
 # inputs
 DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/test/" #STAR1pass/"
 INDEX="/n/regal/eddy_lab/pkoo/opticlobe/reference_asevent/SE_dm/"
+LENGTHPATH="/n/eddy_lab/pkoo/opticlobe/qualitycontrol/fastqc/length.csv"
+OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/alternativesplicing/"
 
-# perform alignment to reference genome
-for i in $DATA*.bam; do 
-    NAME=${i%.bam}".sorted"
-	sbatch batch_miso.sh $DATA $INDEX $LENGTH $OUTPUT
-    sbatch batch_bamsortindex.sh $i $NAME
+
+# make alignment directory
+if [ ! -d "$OUTPUT" ]; then
+    mkdir $OUTPUT
+fi
+
+for i in $DATA*.sorted.bam; do 
+    NAMEPATH=${i%.sorted.bam}
+    NAME=${NAMEPATH##*/}
+    LENGTH="$(grep $NAME $LENTGHPATH | grep -oE "[^,]+$")"
+
+	sbatch batch_miso.sh $i $INDEX $LENGTH $OUTPUT$NAME
 done
 
