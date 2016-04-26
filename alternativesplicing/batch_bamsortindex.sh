@@ -8,7 +8,7 @@
 #SBATCH -n 2                       # number of cores
 #SBATCH -N 1                            # number of nodes
 #SBATCH --mem 4000                	# memory pool for all cores
-#SBATCH -t 0-12:00                       # time (D-HH:MM)
+#SBATCH -t 0-0:30                       # time (D-HH:MM)
 #SBATCH -o log/sam_%A.out   	# STDOUT
 #SBATCH -e log/sam_%A.err     	# STDERR
 #SBATCH --mail-type=FAIL 		# notifications (END,FAIL,ALL)
@@ -21,4 +21,3 @@ module load samtools/1.2-fasrc01
 # perform alignment to reference genome
 samtools sort $1 $2
 samtools index $2.bam
-

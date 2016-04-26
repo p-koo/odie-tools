@@ -7,7 +7,7 @@
 #	<output_name>
 
 # inputs
-ALIGNER="test/" #"STAR1pass/"
+ALIGNER="STAR1pass/"
 DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/"$ALIGNER
 
 # sort index bam files in DATA directory
