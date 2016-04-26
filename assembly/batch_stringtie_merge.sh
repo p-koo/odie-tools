@@ -8,7 +8,7 @@
 #
 #SBATCH -J Stringtie_merge			# job name
 #SBATCH -p serial_requeue        	# partition (general,serial_requeue)
-#SBATCH -n 4                            # number of cores
+#SBATCH -n 12                           # number of cores
 #SBATCH -N 1                            # number of nodes
 #SBATCH --mem 8000                	# memory pool for all cores
 #SBATCH -t 0-1:30                       # time (D-HH:MM)
