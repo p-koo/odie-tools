@@ -7,10 +7,14 @@
 #	<output_name>
 
 # inputs
-ALIGNER="STAR1pass/"
+ALIGNER="test/" #"STAR1pass/"
 DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/"$ALIGNER
 
 # sort index bam files in DATA directory
-sbatch batch_bamsortindex.sh $DATA
 
+# perform alignment to reference genome
+for i in $DATA*.bam; do 
+    NAME=${i%.bam}".sorted"
+    sbatch batch_bamsortindex.sh $i $NAME
+done
 

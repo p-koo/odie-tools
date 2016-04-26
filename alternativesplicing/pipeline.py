@@ -2,33 +2,28 @@
 srun -p interact --mem 4000 --pty -n 1 -N 1 -t 0-6:00 /bin/bash
 
 
-1. STAR --> build --> align
-2. samtools - sort --> index bam
-3. StringTie assemble
+1. align RNA-seq reads (STAR)
+	- run_star_build.sh
+	- run_star1pass.sh
+	
+2. sort+index bam (samtools)
+	- run_bamsortindex.sh
 
-cuffmerge assemblies:
+3. assemble transcripts (stringtie)
+	- run_stringtie_assemble.sh
 
+4. merge assemblies (stringtie)
+	- run_stringtie_merge.sh
+	- delete first lines of gtf file (i.e. commands)
 
-Convert gtf to gff:
-perl gtf_to_gff.pl corrected.gtf > corrected.gff
+5. identify skipped exon events 
+	wget https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwi-w_3F5azMAhVEbz4KHaU9DagQFggcMAA&url=http%3A%2F%2Fhgdownload.cse.ucsc.edu%2Fadmin%2Fexe%2Flinux.x86_64%2FgtfToGenePred&usg=AFQjCNEXOvw2e7R-Fq2M7xf0DcJLsVjxpg&bvm=bv.120551593,d.cWw&cad=rja
+	chmod +x gtfToGenePred
+	pip install gffutils
+	easy_install rnaseqlib
 
-AltEventFinder:
-
-wget http://watson.compbio.iupui.edu/aozhou/alt_event_finder_files/AltEventFinder_v0.1.tar.gz
-tar xzf AltEventFinder_v0.1
-mv AltEventFinder_v0.1 /n/eddy_lab/pkoo/opticlobe/bin
-
-vi ~/.bashrc
->> export PATH=$PATH:"/n/eddy_lab/pkoo/opticlobe/bin/AltEventFinder"
-source ~/.bashrc
- 
-Usagecd
-For CufflinksFormat.gtf, run the following command:
-	alt_event_finder --cufflinks CufflinksFormat.gtf CufflinksFormat
-For ScriptureFormat.segments, run the following command:
-	alt_event_finder --scripture ScriptureFormat.segments ScriptureFormat
-
-MISO:
+	./gtfToGenePred dm.gtf dm.genePred
+	gff_make_annotation path_to_pred_table output_directory --flanking-rule commonshortest --genome-label dm 
 
 # build alternative event index:
 index_gff.py --index path_to_gff path_to_index_directory
@@ -72,3 +67,9 @@ altevents/4_SE/ sashimi_plot_settings.txt  --output-dir sashimi_plot
 
 plot.py --plot-event "chr4:497918:498709:-@chr4:495586:495730:-@chr4:495079:495394:-" \
 altevents/4_SE/ sashimi_plot_settings.txt  --output-dir sashimi_plot
+
+
+or
+5. convert merged gtf to gff
+	- perl gtf_to_gff.pl dm.gtf > dm.gff
+
