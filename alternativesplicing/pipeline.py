@@ -15,6 +15,13 @@ perl gtf_to_gff.pl corrected.gtf > corrected.gff
 AltEventFinder:
 
 wget http://watson.compbio.iupui.edu/aozhou/alt_event_finder_files/AltEventFinder_v0.1.tar.gz
+tar xzf AltEventFinder_v0.1
+mv AltEventFinder_v0.1 /n/eddy_lab/pkoo/opticlobe/bin
+
+vi ~/.bashrc
+>> export PATH=$PATH:"/n/eddy_lab/pkoo/opticlobe/bin/AltEventFinder"
+source ~/.bashrc
+ 
 Usagecd
 For CufflinksFormat.gtf, run the following command:
 	alt_event_finder --cufflinks CufflinksFormat.gtf CufflinksFormat

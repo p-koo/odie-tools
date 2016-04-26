@@ -20,11 +20,9 @@
 # load modules 
 source new-modules.sh
 
-OUTPUT="$(ls $1)"
-
 # perform transcript assembly 
 stringtie \
---merge
+--merge \
 -l "merged" \
 -G $2 \
 -o $3.gtf \
@@ -32,4 +30,5 @@ stringtie \
 -c 0 \
 -F 0 \
 -T 0 \
-echo "${OUTPUT}"
+$1
+
