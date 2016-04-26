@@ -15,8 +15,8 @@ if [ ! -d "$OUTPUT" ]; then
     mkdir $OUTPUT
 fi
 
-for i in $DATA*.sorted.bam; do 
-    NAMEPATH=${i%.sorted.bam}
+for i in $DATA*.sorted.bam.bai; do 
+    NAMEPATH=${i%.sorted.bam.bai}
     NAME=${NAMEPATH##*/}
     LENGTH="$(grep $NAME $LENTGHPATH | grep -oE "[^,]+$")"
 
