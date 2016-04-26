@@ -1,6 +1,7 @@
 
-srun -p interact --mem 4000 --pty -n 1 -N 1 -t 0-6:00 /bin/bash
+srun -p interact --mem 4000 --pty -n 1 -N 1 -t 0-2:00 /bin/bash
 
+sacct --format user,jobid,ncpus,elapsed,totalcpu,reqmem,maxrss --name BamSortIndex
 
 1. align RNA-seq reads (STAR)
 	- run_star_build.sh
@@ -21,12 +22,18 @@ srun -p interact --mem 4000 --pty -n 1 -N 1 -t 0-6:00 /bin/bash
 	chmod +x gtfToGenePred
 	pip install gffutils
 	easy_install rnaseqlib
+	fix bug in rnaseqlib/tables.py --> comment #bin
 
-	./gtfToGenePred dm.gtf dm.genePred
+	./gtfToGenePred -genePredExt dm.gtf ensGene.txt
 	gff_make_annotation path_to_pred_table output_directory --flanking-rule commonshortest --genome-label dm 
 
-# build alternative event index:
-index_gff.py --index path_to_gff path_to_index_directory
+
+6. build alternative event index
+	- run_miso_index.sh
+		index_gff.py --index path_to_gff path_to_index_directory
+
+7. calculate psi value for skipped exons
+	- run_miso.sh
 
 # calculate psi value (percent spliced-in),
 run_events_analysis.py \

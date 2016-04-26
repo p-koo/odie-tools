@@ -6,7 +6,7 @@
 # inputs
 DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/test/" #STAR1pass/"
 INDEX="/n/regal/eddy_lab/pkoo/opticlobe/reference_asevent/SE_dm/"
-LENGTHPATH="/n/eddy_lab/pkoo/opticlobe/qualitycontrol/fastqc/length.csv"
+LENGTHPATH="/n/regal/eddy_lab/pkoo/opticlobe/alignment/test/length.csv"
 OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/alternativesplicing/"
 
 
@@ -15,11 +15,11 @@ if [ ! -d "$OUTPUT" ]; then
     mkdir $OUTPUT
 fi
 
-for i in $DATA*.sorted.bam.bai; do 
-    NAMEPATH=${i%.sorted.bam.bai}
+for i in $DATA*.sorted.bam; do 
+    NAMEPATH=${i%.sorted.bam}
     NAME=${NAMEPATH##*/}
-    LENGTH="$(grep $NAME $LENTGHPATH | grep -oE "[^,]+$")"
-
+    NAME=${NAME%Aligned*}
+    LENGTH="$(grep $NAME $LENGTHPATH | grep -oE "[^,]+$")"
 	sbatch batch_miso.sh $i $INDEX $LENGTH $OUTPUT$NAME
 done
 
