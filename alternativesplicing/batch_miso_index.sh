@@ -15,6 +15,7 @@
 #SBATCH --mail-user=peter_koo@harvard.edu     # send-to address
 
 # load modules
+module load python/2.7.6-fasrc01
 source activate pyMISO
 
 index_gff --index $1 $2

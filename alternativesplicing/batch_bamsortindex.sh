@@ -20,5 +20,5 @@ module load samtools/1.2-fasrc01
 
 # perform alignment to reference genome
 samtools sort $1 $2
-samtools index $2
+samtools index $2.bam
 
