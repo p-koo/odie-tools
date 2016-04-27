@@ -4,7 +4,7 @@
 # summary: wrapper script to run a batch job for batch_miso_index.sh
 
 # inputs
-DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/test/" #STAR1pass/"
+DATA="/n/regal/eddy_lab/pkoo/opticlobe/alignment/STAR1pass/"
 INDEX="/n/regal/eddy_lab/pkoo/opticlobe/reference_asevent/SE_dm/"
 LENGTHPATH="/n/regal/eddy_lab/pkoo/opticlobe/alignment/test/length.csv"
 OUTPUT="/n/regal/eddy_lab/pkoo/opticlobe/alternativesplicing/"
