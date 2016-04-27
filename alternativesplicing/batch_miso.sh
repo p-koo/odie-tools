@@ -8,7 +8,7 @@
 #SBATCH -n 4                    # number of cores
 #SBATCH -N 1                    # number of nodes
 #SBATCH --mem 8000              # memory pool for all cores
-#SBATCH -t 0-1:00               # time (D-HH:MM)
+#SBATCH -t 0-2:00               # time (D-HH:MM)
 #SBATCH -o log/miso_%A.out   	# STDOUT
 #SBATCH -e log/miso_%A.err     	# STDERR
 #SBATCH --mail-type=FAIL 		# notifications (END,FAIL,ALL)
