@@ -7,5 +7,5 @@
 DATA="/n/regal/eddy_lab/pkoo/mRNAlocalization/data/rawreads/"
 
 for i in $DATA*.sra; do 
-	sbatch batch_fastq_dump $i
+	sbatch batch_fastq_dump.sh $i
 done
