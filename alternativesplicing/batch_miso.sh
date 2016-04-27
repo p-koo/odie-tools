@@ -18,7 +18,7 @@
 module load python/2.7.6-fasrc01
 source activate pyMISO
 
-miso --run $2 $1 --output-dir $4 --read-len $3 --use-cluster
+miso --run $2 $1 --output-dir $4 --read-len $3 # --use-cluster
 summarize_miso --summarize-samples $4 $4
 
 
