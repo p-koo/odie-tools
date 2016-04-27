@@ -8,7 +8,7 @@
 #SBATCH -n 1                       # number of cores
 #SBATCH -N 1                            # number of nodes
 #SBATCH --mem 4000              # memory pool for all cores
-#SBATCH -t 0-2:00               # time (D-HH:MM)
+#SBATCH -t 0-4:00               # time (D-HH:MM)
 #SBATCH -o log/sra_%A.out   	# STDOUT
 #SBATCH -e log/sra_%A.err     	# STDERR
 
