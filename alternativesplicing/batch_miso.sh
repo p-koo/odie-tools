@@ -4,9 +4,9 @@
 # summary: convert bam to a sorted indexed bam file
 #
 #SBATCH -J MISO					# job name
-#SBATCH -p serial_requeue        	# partition (general,serial_requeue)
-#SBATCH -n 16                       # number of cores
-#SBATCH -N 1                            # number of nodes
+#SBATCH -p serial_requeue       # partition (general,serial_requeue)
+#SBATCH -n 4                    # number of cores
+#SBATCH -N 1                    # number of nodes
 #SBATCH --mem 8000              # memory pool for all cores
 #SBATCH -t 0-1:00               # time (D-HH:MM)
 #SBATCH -o log/miso_%A.out   	# STDOUT
