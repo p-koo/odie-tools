@@ -15,7 +15,7 @@
 # load modules
 module load bib/2014.05.19-fasrc02
 
-fastq-dump --gzip $1*.sra
+fastq-dump --gzip $1*
 
 
 
