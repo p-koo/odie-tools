@@ -15,7 +15,11 @@
 # load modules
 module load bib/2014.05.19-fasrc02
 
-fastq-dump --gzip $1*
+
+for i in $(ls $1); do 
+	fastq-dump --gzip $i
+done
+
 
 
 
