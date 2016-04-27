@@ -5,9 +5,9 @@
 #
 #SBATCH -J MISO					# job name
 #SBATCH -p serial_requeue       # partition (general,serial_requeue)
-#SBATCH -n 4                    # number of cores
+#SBATCH -n 1                    # number of cores
 #SBATCH -N 1                    # number of nodes
-#SBATCH --mem 8000              # memory pool for all cores
+#SBATCH --mem 4000              # memory pool for all cores
 #SBATCH -t 0-4:00               # time (D-HH:MM)
 #SBATCH -o log/miso_%A.out   	# STDOUT
 #SBATCH -e log/miso_%A.err     	# STDERR

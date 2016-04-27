@@ -22,4 +22,3 @@ for i in $DATA*.sorted.bam; do
     LENGTH="$(grep $NAME $LENGTHPATH | grep -oE "[^,]+$")"
 	sbatch batch_miso.sh $i $INDEX $LENGTH $OUTPUT$NAME
 done
-
