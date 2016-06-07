@@ -5,16 +5,14 @@
 # 	<data_directory> and save files to <output_directory>
 # example: sbatch run_fastqc.sh <data_directory> <output_directory> 
 #
-#SBATCH -J FastQC			# job name
+#SBATCH -J FastQC					# job name
 #SBATCH -p serial_requeue         	# partition (general,serial_requeue)
-#SBATCH -n 1				# number of cores
-#SBATCH -N 1                            # number of nodes
+#SBATCH -n 1						# number of cores
+#SBATCH -N 1                        # number of nodes
 #SBATCH --mem 4000                	# memory pool for all cores
-#SBATCH -t 0-20:00                      # time (D-HH:MM)
+#SBATCH -t 0-20:00                  # time (D-HH:MM)
 #SBATCH -o log/fastqc_%A.out   		# STDOUT
 #SBATCH -e log/fastqc_%A.err     	# STDERR
-#SBATCH --mail-type=FAIL         	# notifications (END,FAIL,ALL)
-#SBATCH --mail-user=peter_koo@harvard.edu     # send-to address
 
 # load modules
 source new-modules.sh

@@ -1,4 +1,4 @@
-#/bin/bash
+#bin/bash
 #
 # filename: run_cufflinks.sh
 # summary: wrapper script to run a batch job for batch_cufflinks.sh 

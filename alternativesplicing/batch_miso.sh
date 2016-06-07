@@ -1,7 +1,8 @@
 #!/bin/bash
 #
 # filename: batch_bamsortindex.sh
-# summary: convert bam to a sorted indexed bam file
+# summary: run mixture of isoforms to determine alternative splicing
+# percentage spliced in 
 #
 #SBATCH -J MISO					# job name
 #SBATCH -p serial_requeue       # partition (general,serial_requeue)
@@ -11,8 +12,6 @@
 #SBATCH -t 0-4:00               # time (D-HH:MM)
 #SBATCH -o log/miso_%A.out   	# STDOUT
 #SBATCH -e log/miso_%A.err     	# STDERR
-#SBATCH --mail-type=FAIL 		# notifications (END,FAIL,ALL)
-#SBATCH --mail-user=peter_koo@harvard.edu     # send-to address
 
 # load modules
 module load python/2.7.6-fasrc01

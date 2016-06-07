@@ -13,8 +13,6 @@
 #SBATCH -t 0-2:00                       # time (D-HH:MM)
 #SBATCH -o log/kallisto_%A.out          # STDOUT
 #SBATCH -e log/kallisto_%A.err          # STDERR
-#SBATCH --mail-type=FAIL                # notifications (END,FAIL,ALL)
-#SBATCH --mail-user=peter_koo@harvard.edu     # send-to address
 
 #load modules 
 source new-modules.sh
