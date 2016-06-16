@@ -1,4 +1,7 @@
-# RNA-seq analysis tools to run on Harvard's Odyssey cluster
+# RNA-seq analysis tools for Harvard's Odyssey cluster
+
+### qualitycontrol
+	- fastqc (metrics to visualize quality of NGS reads)
 
 ### alignment
 	- STAR1pass (fast spliced-aware aligner using suffix arrays)
@@ -14,9 +17,6 @@
 
 ### preprocessing
 	- fastq dump (convert SRA files to fastq)
-
-### qualitycontrol
-	- fastqc (metrics to visualize quality of NGS reads)
 
 ### quantification
 	- kallisto (fast transcript quantification using k-mers)
